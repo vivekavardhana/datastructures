@@ -1,5 +1,5 @@
 
-#include <stdio.h>
+#include <stdio.h> 
 
 int main() {
    int LA[] = {10,14,19,26,27,31,33,35,42,44};
