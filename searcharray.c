@@ -11,7 +11,7 @@ int main() {
    for(i = 0; i<n; i++) {
       printf("LA[%d] = %d \n", i, LA[i]);
    }
-    
+     
    while( j < n){
       if( LA[j] == item ) {
          break;
