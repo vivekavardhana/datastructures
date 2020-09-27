@@ -60,9 +60,7 @@ void computeLPSArray(char* pat, int M, int* lps)
 		} 
 		else // (pat[i] != pat[len]) 
 		{ 
-			// This is tricky. Consider the example. 
-			// AAACAAAA and i = 7. The idea is similar 
-			// to search step. 
+			
 			if (len != 0) { 
 				len = lps[len - 1]; 
 
