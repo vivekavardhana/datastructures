@@ -26,7 +26,7 @@ void KMPSearch(char* pat, char* txt)
 		} 
 
 		if (j == M) { 
-			printf("Found pattern at index %d ", i - j); 
+			printf("Found pattern at index %d \n\n\n\n", i - j); 
 			j = lps[j - 1]; 
 		} 
 
