@@ -80,7 +80,7 @@ int main()
                 }
                 else
                 {
-                    printf("\nUNBALANCED EXPRESSION\n");
+                    printf("\nUNBALANCED EXPRESSION \n");
                     break;
                 }
             }
