@@ -34,6 +34,7 @@ void pop()
 
 int main()
 {
+    
     char exp[MAX];
     int i = 0;
     s.top = -1; 

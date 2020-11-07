@@ -8,11 +8,11 @@ char infix_string[20], postfix_string[20];
 int top;
 int stack[20];
 
-int pop();
-int precedence(char symbol);
-int isEmpty();
+int  pop(); 
+int  precedence(char symbol);
+int  isEmpty();
 void infix_to_postfix();
-int check_space(char symbol);
+int  check_space(char symbol);
 void push(long int symbol);
 
 int main()

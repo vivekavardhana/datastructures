@@ -32,6 +32,7 @@ int main()
         {
             n1 = pop();
             n2 = pop();
+            printf("%d  %d", n1, n2);
             switch(*e)
             {
             case '+':
@@ -39,7 +40,7 @@ int main()
                 n3 = n1 + n2;
                 break;
             }
-            case '-':
+            case '-': 
             {
                 n3 = n2 - n1;
                 break;
