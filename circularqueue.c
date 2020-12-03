@@ -11,7 +11,7 @@ int cQueue[SIZE], front = -1, rear = -1;
 void main()
 {
    int choice, value;
-   clrscr();
+    
    while (1)
    {
       printf("\n****** MENU ******\n");

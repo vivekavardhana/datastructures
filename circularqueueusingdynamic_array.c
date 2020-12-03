@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+//#include <stdlib.h>
 #define MAX 5
 struct Q
 {
@@ -8,10 +8,10 @@ struct Q
 
 void enq(struct Q *);
 void display(struct Q *);
-main()
+int main()
 {
     int n, i;
-    struct Q *qptr = (struct Q *)malloc(sizeof(struct Q *));
+    struct Q *qptr = (struct Q *)malloc(sizeof(struct Q ));
     qptr->front = -1;
     qptr->rear = -1;
     printf("enter the number of elements");
@@ -19,6 +19,7 @@ main()
     for (i = 1; i <= n; i++)
         enq(qptr);
     display(qptr);
+    return 0;
 }
 void enq(struct Q *qptr)
 {
