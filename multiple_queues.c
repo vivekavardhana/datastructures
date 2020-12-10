@@ -3,7 +3,7 @@
 #define MAX 20
 int insq( int queue[MAX], int qno, int rear[], int limit[], int *ele)
 {
-      if( rear[qno] == limit[qno] )
+      if( rear[qno] == limit[qno] ) 
             return(-1);
       else
       {

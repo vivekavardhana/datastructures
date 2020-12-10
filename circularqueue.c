@@ -78,7 +78,7 @@ void display()
          while (i <= rear)
             printf("%d\t", cQueue[i++]);
       }
-      else
+      else  
       {
          while (i <= SIZE - 1)
             printf("%d\t", cQueue[i++]);

@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+ 
 #include <stdlib.h>
  //structure of Node with prev and next pointers
 struct node {
@@ -70,7 +70,7 @@ void displayList() {
 }
 
 /* Function to insert node at the end of the list */
-void insertAtEnd(int data) {
+void insertAtEnd(int data) { 
   struct node * newNode;
   if (last == NULL) {
     printf("Error, List is empty!\n");
@@ -82,4 +82,4 @@ void insertAtEnd(int data) {
     last -> next = newNode; // next pointer of the last node is referenced to the newNode
     last = newNode; // newNode is made as the last node
   }
-}
+} 

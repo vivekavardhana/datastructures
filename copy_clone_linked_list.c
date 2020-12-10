@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
- 
+  
 // Data Structure to store a linked list node
 struct Node
 {

@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+  
 #include <stdlib.h>
 
 //structure of Node with prev and next pointers
@@ -8,6 +8,7 @@ struct node {
   struct node * prev;
   struct node * next;
 }* head, * last;
+
 void createList(int n);
 void displayList();
 void delete_beginning();
@@ -64,9 +65,9 @@ void displayList() {
       /* Move the current pointer to next node */
       temp = temp -> next;
     }
-  }
+  } 
 }
-
+ 
 /*  Function to delete the node at the beginning of the list  */
 void delete_beginning() {
   struct node * temp;
@@ -75,3 +76,4 @@ void delete_beginning() {
   head -> prev == NULL; // The prev pointer of the head node is NULL
   free(temp); // Delete the first node
 }
+ 

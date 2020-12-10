@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+ 
 #include <stdlib.h>
 
 //structure of Node with prev and next pointers
@@ -67,13 +67,13 @@ void displayList() {
     }
   }
 }
-
+ 
 /* Function to delete a node at the given position in the list */
 void delete_given_position(int position) {
   struct node * temp;
   int i;
   temp = head;
-  for (i = 0; i < position && current != NULL; i++) {
+  for (i = 0; i < position-1 && temp != NULL; i++) {
     temp = temp -> next;
   }
   if (temp != NULL) {
@@ -82,5 +82,5 @@ void delete_given_position(int position) {
     free(temp); // Delete the temp node
   } else {
     printf("Invalid position!\n");
-  }
+  } 
 }

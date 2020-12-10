@@ -1,4 +1,4 @@
-/*File: test.c*/
+ 
 
 #include <stdio.h>
 #include <stdlib.h>

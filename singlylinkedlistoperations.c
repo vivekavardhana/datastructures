@@ -113,7 +113,7 @@ void insert_before(struct node ** head, int value, int before) {
   }
 
   /*Before node not found*/
-  free(new_node);
+  free(new_node); 
 }
 
 void main() {

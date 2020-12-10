@@ -35,7 +35,7 @@ void enq(struct Q *qptr)
         qptr->rear = 0;
     }
     else if (qptr->rear == MAX - 1)
-        qptr->rear == 0;
+        qptr->rear == 0;  
     else
         qptr->rear = qptr->rear + 1;
     printf("enter the data to be entered\n");

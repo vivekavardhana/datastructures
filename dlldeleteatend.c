@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+ 
 #include <stdlib.h>
 
 //structure of Node with prev and next pointers
@@ -65,7 +65,7 @@ void displayList() {
       temp = temp -> next;
     }
   }
-}
+} 
 
 /* Function to delete the node at the end of the list */
 void delete_end() {
@@ -79,4 +79,4 @@ void delete_end() {
       last -> next = NULL; // The next pointer of the last node is NULL
     free(temp); // Delete the last node
   }
-}
+} 

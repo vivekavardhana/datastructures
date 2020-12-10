@@ -112,7 +112,7 @@ void addRear(int *arr, int item, int *pfront, int *prear)
     for (i = *pfront - 1; i < *prear; i++)
     {
       k = i;
-      if (k == MAX - 1)
+      if (k == MAX - 1) 
         arr[k] = 0;
       else
         arr[k] = arr[i + 1];

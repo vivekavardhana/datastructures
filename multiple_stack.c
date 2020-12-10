@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 #include <malloc.h>
-
+ 
 #define MAX 10
+
 int stack[MAX], topA = -1, topB = MAX;
+
 void pushA(int val) {
   if (topA == topB - 1)
     printf("\n Overflow");
@@ -12,6 +14,7 @@ void pushA(int val) {
     stack[topA] = val;
   }
 }
+
 int popA() {
   int val;
   if (topA == -1) {
@@ -23,6 +26,7 @@ int popA() {
   }
   return val;
 }
+
 void display_stackA() {
   int i;
   if (topA == -1)

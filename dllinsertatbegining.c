@@ -1,6 +1,6 @@
-#include <stdio.h>
-
-#include <stdlib.h>
+#include <stdio.h> 
+  
+ 
  //structure of Node with prev and next pointers
 struct node {
   int data;
@@ -67,7 +67,7 @@ void displayList() {
       temp = temp -> next;
     }
   }
-}
+} 
 
 /* Function to insert node at the beginning of the list */
 void insertAtBeginning(int data) {

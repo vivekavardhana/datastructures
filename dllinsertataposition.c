@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+   
 #include <stdlib.h>
  //structure of Node with prev and next pointers
 struct node {
@@ -72,7 +72,7 @@ void displayList() {
 
 void insert_given_pos(int data, int position) {
   int i;
-  struct node * newNode, * temp;
+  struct node * newNode, * temp; 
   if (head == NULL) {
     printf("Error, List is empty!\n");
   } else {
@@ -80,8 +80,8 @@ void insert_given_pos(int data, int position) {
     i = 0;
     while (i < position - 1 && temp != NULL) {
       temp = temp -> next;
-      i++;
-    }
+      i++; 
+    } 
     if (temp != NULL) {
       newNode = (struct node * ) malloc(sizeof(struct node));
       newNode -> data = data;

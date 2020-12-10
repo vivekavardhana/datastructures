@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+   
 
 struct Node {
   int data;
@@ -74,7 +74,7 @@ struct Node * addAfter(struct Node * last, int data, int item) {
     p = p -> next;
   } while (p != last -> next);
 
-  cout << item << " not present in the list." << endl;
+  printf(" not present in the list.");
   return last;
 
 }
@@ -84,7 +84,7 @@ void traverse(struct Node * last) {
 
   // If list is empty, return.
   if (last == NULL) {
-    cout << "List is empty." << endl;
+    printf("List is empty.");
     return;
   }
 
@@ -93,7 +93,7 @@ void traverse(struct Node * last) {
 
   // Traversing the list.
   do {
-    cout << p -> data << " ";
+    printf("%d  ",p -> data ) ;
     p = p -> next;
 
   }

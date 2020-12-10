@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<stdlib.h>
+#include<stdlib.h> 
 
 typedef struct
 {
@@ -47,8 +47,8 @@ void readMaze()
 
 void setMoveTable()
 {
-          move[0].vert = -1, move[0].horiz = 0;
-          move[1].vert = -1, move[1].horiz = 1;
+          move[0].vert = -1,  move[0].horiz = 0;
+          move[1].vert = -1,  move[1].horiz = 1;
           move[2].vert = 0,   move[2].horiz = 1;
           move[3].vert = 1,   move[3].horiz = 1;
           move[4].vert = 1,   move[4].horiz = 0;
