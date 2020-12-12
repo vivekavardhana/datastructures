@@ -1,90 +1,90 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <malloc.h>
+#include<stdio.h>
+#include<stdlib.h>
 
-struct node
-{
-
-    int data;
-
-    struct node *next;
-
-} * head, *temp, *p;
-
-    void push();
-    void pop();
-
-int main()
-{
-
-    int n, i;
-
-    char ch;
-
-    printf("how many nodes ?:");
-
-    scanf("%d", &n);
-
-    head = (struct node * ) malloc(sizeof(struct node));
- 
-    printf("Enter a value for node->data:");
-
-    scanf("%d", &head->data);
-
-    head->next = NULL;
-
-    for (i = 0; i < n - 1; i++) 
-    { 
-
-        push(); 
-
-    } 
-
-        printf("\n\n"); 
-
-        printf("Top = %d \n\n ", head-> data);
-
-        printf("Do you wish to Pop:y/n:");
-
-        scanf("%s", & ch);
-
-    if (ch == 'y')
-    {
-
-        pop();
-
-        printf("\n\n");
-
-        printf("new top = %d\n", head->data);
-
-        printf("\n\n");
-
-    }
-
-    
-
-    return 0;
-
-}
+typedef struct node{
+  int data;struct node *next;
+              }node;
+typedef node *list; 
+list top=NULL;
+list ptr;
 
 void push()
-
 {
-
-    temp = (struct node * ) malloc(sizeof(struct node));
-
-    printf("Enter a value for node->data:");
-
-    scanf("%d", &temp->data);
-
-    temp->next =  head = temp;
-
+  printf("enter elements\n");
+  ptr=(node*)malloc(sizeof(node));
+  if(top==NULL)
+      {
+      top=(node*)malloc(sizeof(node));
+      scanf("%d",&top->data);
+      top->next=NULL;
+      }
+      else
+      {
+        scanf("%d",&ptr->data);ptr->next=top;top=ptr;
+      }
 }
 
 void pop()
-
 {
+  if(top==NULL)
+    printf("Underflow\n");
+  else
+  {
+    printf("popped element is %d\n",top->data);top=top->next;
+    }
+}
 
-    head = head->next;
+void display()
+{ 
+  ptr=top;
+  if(top==NULL)
+    printf("Underflow\n");
+  else
+  {
+    printf("elements are\n");
+    while(ptr!=NULL)
+    { 
+      printf("%d ",ptr->data);ptr=ptr->next;
+    }
+  }
+}
 
+
+void peep()
+{
+  if(top==NULL)
+  printf("Underfloe\n");
+  else
+  { 
+    printf("elements ts: %d\n",top->data);
+    }
+}
+
+int main()
+{
+  int ch;
+  do
+  {
+    printf("Enter switch: ");
+    printf("1 : Push\n ");
+    printf("2 : Display\n ");
+    printf("3 : Pop\n ");
+    printf("4 : Peep\n ");
+    scanf("%d",&ch);
+    switch(ch)
+    {        
+      case 1:
+        push();
+        break;
+      case 2:
+        display();
+        break;
+      case 3:
+        pop();
+        break;
+      case 4:
+        peep();
+        break;
+    }
+  }while(ch!=0);
 }
