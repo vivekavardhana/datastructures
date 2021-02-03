@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<conio.h>
+#include<stdlib.h> 
 
 struct Node{
    int data;
@@ -11,15 +11,17 @@ struct Node *root = NULL;
 int count = 0;
 
 struct Node* insert(struct Node*, int);
-void display(struct Node*);
+void inorder(struct Node*);
+void preorder(struct Node*);
+void postorder(struct Node*);
 
 void main(){
    int choice, value;
-   clrscr();
+    
    printf("\n----- Binary Tree -----\n");
    while(1){
       printf("\n***** MENU *****\n");
-      printf("1. Insert\n2. Display\n3. Exit");
+      printf("1. Insert\n2. Inorder Traversal\n2. Pre order Traversal\n2. Postorder Traversal\n3. Exit");
       printf("\nEnter your choice: ");
       scanf("%d",&choice);
       switch(choice){
@@ -63,9 +65,9 @@ struct Node* insert(struct Node *root,int value){
 void inorder(struct Node *root)
 {
    if(root != NULL){
-      display(root->left);
+      inorder(root->left);
       printf("%d\t",root->data);
-      display(root->right);
+      inorder(root->right);
    }
 }
 
@@ -74,8 +76,8 @@ void preorder(struct Node *root)
 {
    if(root != NULL){
       printf("%d\t",root->data);	   
-      display(root->left);
-      display(root->right);
+      preorder(root->left);
+      preorder(root->right);
    }
 }
 
@@ -83,8 +85,9 @@ void preorder(struct Node *root)
 void postorder(struct Node *root)
 {
    if(root != NULL){
-      printf("%d\t",root->data);	   
-      display(root->left);
-      display(root->right);
+      	   
+      postorder(root->left);
+      postorder(root->right);
+      printf("%d\t",root->data);
    }
 }
