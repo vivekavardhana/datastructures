@@ -27,8 +27,16 @@ void main(){
 		 scanf("%d", &value);
 		 root = insert(root,value);
 		 break;
-	 case 2: display(root); break;
-	 case 3: exit(0);
+	 case 2: printf("\n In order Traversal");
+		 inorder(root); 
+		 break;
+	 case 3: printf("\n Pre order Traversal");
+		 preorder(root); 
+		 break;
+	 case 4: printf("\n Post order Traversal");
+		 postorder(root); 
+		 break;		      
+	 case 5: exit(0);
 	 default: printf("\nPlease select correct operations!!!\n");
       }
    }
@@ -52,11 +60,31 @@ struct Node* insert(struct Node *root,int value){
    return root;
 }
 // display is performed by using Inorder Traversal
-void display(struct Node *root)
+void inorder(struct Node *root)
 {
    if(root != NULL){
       display(root->left);
       printf("%d\t",root->data);
+      display(root->right);
+   }
+}
+
+// display is performed by using Preorder Traversal
+void preorder(struct Node *root)
+{
+   if(root != NULL){
+      printf("%d\t",root->data);	   
+      display(root->left);
+      display(root->right);
+   }
+}
+
+// display is performed by using Postorder Traversal
+void postorder(struct Node *root)
+{
+   if(root != NULL){
+      printf("%d\t",root->data);	   
+      display(root->left);
       display(root->right);
    }
 }
